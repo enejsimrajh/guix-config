@@ -6,7 +6,7 @@ $ DISK=<target_device>
 
 3. Edit configuration on step 07.
 
-3. Set password upon reboot:
+4. Set password upon reboot:
 $ passwd root
 
-4. Work on configuration.
+5. Work on configuration.

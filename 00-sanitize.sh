@@ -1,8 +1,9 @@
+NVME=${DISK%n1}
+
 if ! command -v nvme-cli >/dev/null 2>&1; then
     guix install nvme-cli
 fi
 
-NVME=${DISK%n1}
 nvme sanitize-log $NVME
 read -p "Do you want to sanitize device $NVME? (y/n) " answer
 
