@@ -1,4 +1,4 @@
-SWAPFILE=/mnt/swap/swapfile
+export SWAPFILE=/mnt/swap/swapfile
 
 mkdir /mnt/swap
 mount -o subvol=@swap $ROOTDEVICE /mnt/swap

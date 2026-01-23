@@ -1,12 +1,9 @@
-1. Identify the target storage device and set the DISK variable:
+Before starting, identify the target storage device and set the DISK variable:
 $ lsblk
-$ DISK=<target_device>
+$ export DISK=<target device>
 
-2. Optionally sanitize the device, then run scripts in the specified order.
+Sanitize, encrypt, and swap steps are optional but recommended.
 
-3. Edit configuration on step 07.
-
-4. Set password upon reboot:
+Reboot and set the password if all the steps have completed successfully:
+$ reboot
 $ passwd root
-
-5. Work on configuration.
