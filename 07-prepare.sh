@@ -1,7 +1,8 @@
-export CONFIGFILE=/mnt/persist/etc/guix/config.scm
+configdir=/mnt/keep/etc
+export GUIX_CONFIGFILE="$configdir"/config.scm
 
 herd start cow-store /mnt
 
-mkdir -p /mnt/persist/etc/guix
-cp /etc/configuration/lightweight-desktop.scm $CONFIGFILE
-emacs $CONFIGFILE
+mkdir -p $configdir
+cp /etc/configuration/lightweight-desktop.scm $GUIX_CONFIGFILE
+emacs $GUIX_CONFIGFILE

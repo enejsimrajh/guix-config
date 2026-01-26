@@ -1,5 +1,5 @@
-cryptsetup luksFormat --type luks2 --pbkdf pbkdf2 $ROOTDEVICE
-cryptsetup open $ROOTDEVICE root
-crpytsetup luksDump $ROOTDEVICE
+cryptsetup luksFormat --type luks2 --pbkdf pbkdf2 $GUIX_SYSTEM_PARTITION
+cryptsetup open $GUIX_SYSTEM_PARTITION system
+crpytsetup luksDump $GUIX_SYSTEM_PARTITION
 
-export ROOTDEVICE=/dev/mapper/root
+export GUIX_SYSTEM_PARTITION=/dev/mapper/system

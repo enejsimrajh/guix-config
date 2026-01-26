@@ -1,7 +1,4 @@
-export BOOTDEVICE="$DISK"p1
-export ROOTDEVICE="$DISK"p2
-
-parted --script $DISK -- mklabel gpt \
+parted --script $GUIX_DRIVE -- mklabel gpt \
 	mkpart boot fat32 0% 1GiB set 1 esp on \
-	mkpart root 1GiB 100% \
+	mkpart system 1GiB 100% \
 	print
