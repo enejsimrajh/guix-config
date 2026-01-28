@@ -32,6 +32,6 @@ while [[ -z "$GUIX_DRIVE" ]]; do
 	
 	export GUIX_DRIVE=$drive
 	export GUIX_DRIVE_FQN=$drive_fqn
-	export GUIX_BOOT_PART="$drive_fqn"$"part_prefix"1
-	export GUIX_SYST_PART="$drive_fqn"$"part_prefix"2
+	export GUIX_BOOT_PART="$drive_fqn""$part_prefix"1
+	export GUIX_SYST_PART="$drive_fqn""$part_prefix"2
 done
