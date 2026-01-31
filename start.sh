@@ -9,7 +9,6 @@ source ~/.bash_profile
 
 # Set storage device variables
 
-
 while [[ -z "$GUIX_DRIVE" ]]; do
 	lsblk
 	read -p "Select target storage device: " drive
