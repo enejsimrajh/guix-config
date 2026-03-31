@@ -1,0 +1,18 @@
+qemu-system-aarch64 \
+    -M virt,highmem=on \
+    -accel hvf \
+    -m 8G \
+    -drive file=guix-system-vm-image-1.5.0.aarch64-linux.qcow2,media=disk,if=virtio,format=qcow2 \
+    -drive file=guix-install-target.qcow2,media=disk,if=virtio \
+    -virtfs local,path=.,mount_tag=guix-config,security_model=passthrough,id=guix-config \
+    -device virtio-scsi-device \
+    -bios /opt/homebrew/Cellar/qemu/9.2.0/share/qemu/edk2-aarch64-code.fd \
+    -cpu host \
+    -smp 4 \
+    -device virtio-net,netdev=vmnic \
+    -netdev user,id=vmnic \
+    -device virtio-gpu-pci \
+    -display default,show-cursor=on \
+    -device qemu-xhci \
+    -device usb-kbd \
+    -device usb-tablet
